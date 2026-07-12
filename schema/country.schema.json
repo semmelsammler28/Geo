@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://geo-lernapp/schema/country.schema.json",
   "title": "Country",
-  "description": "Quelle der Wahrheit für einen Länder-Datensatz der Geo Lernapp v2. Siehe GEO_APP_BRIEFING.md Abschnitt 3 (Datenmodell) und 2.1 (fixierte Scope-Entscheidungen). additionalProperties ist bewusst überall false, um Tippfehler in Feldnamen bei 196 Ländern zu fangen.",
+  "description": "Quelle der Wahrheit für einen Länder-Datensatz der Geo Lernapp v2. Siehe GEO_APP_BRIEFING.md Abschnitt 3 (Datenmodell) und 2.1 (fixierte Scope-Entscheidungen). additionalProperties ist bewusst überall false, um Tippfehler in Feldnamen bei 197 Ländern zu fangen.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -55,7 +55,7 @@
       }
     },
     "status": {
-      "description": "Souveränitäts- und Mitgliedschaftsstatus. Entscheidung 2.1: 195 UN + Taiwan = 196 Records.",
+      "description": "Souveränitäts- und Mitgliedschaftsstatus. Entscheidung 2.1 (+ Kosovo): 195 UN + Taiwan + Kosovo = 197 Records.",
       "type": "object",
       "additionalProperties": false,
       "required": ["unMembership"],
@@ -102,7 +102,7 @@
     "geography": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["continent", "subregion", "coordinates", "neighbors", "landlocked", "timezones"],
+      "required": ["continent", "subregion", "coordinates", "neighbors", "landlocked"],
       "properties": {
         "continent": {
           "enum": ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oceania", "South America"]
@@ -191,7 +191,7 @@
     "society": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["officialLanguages", "population"],
+      "required": ["officialLanguages"],
       "properties": {
         "population": { "$ref": "#/$defs/measuredNumber" },
         "officialLanguages": { "type": "array", "items": { "type": "string" }, "minItems": 0 },

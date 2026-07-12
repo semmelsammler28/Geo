@@ -18,7 +18,7 @@ const root = resolve(__dirname, "..");
 // Ab dieser Datensatzgröße erwarten wir Vollständigkeit: unbekannte
 // Nachbar-Referenzen werden dann zu Fehlern statt Warnungen.
 const COMPLETE_THRESHOLD = 190;
-const EXPECTED_COUNT = 196; // 195 UN + Taiwan (Entscheidung 2.1)
+const EXPECTED_COUNT = 197; // 195 UN + Taiwan + Kosovo (Entscheidung 2.1 + Kosovo)
 // Höchste reale Bevölkerungsdichte eines Landes (Monaco ~19.000/km²).
 // Darüber ist mit hoher Wahrscheinlichkeit ein Zahlendreher im Spiel.
 const MAX_PLAUSIBLE_DENSITY = 30000;
@@ -110,6 +110,12 @@ for (const c of countries) {
   if (typeof hdi === "number" && (hdi < 0 || hdi > 1)) {
     err(id, `HDI ${hdi} außerhalb 0..1`);
   }
+
+  // Kernstats-Vollständigkeit (Tier-2-Lücken). Bewusst nur Warnung, nicht
+  // Fehler: fehlende Bevölkerung/Zeitzonen sind offline erwartbar und werden
+  // später per `npm run refresh` ergänzt.
+  if (c.society?.population?.value == null) warn(id, "keine Bevölkerung (Tier-2-Lücke)");
+  if (!(geo.timezones?.length > 0)) warn(id, "keine Zeitzonen (Tier-2-Lücke)");
 }
 
 // --- 3. Datensatz-weite Checks ----------------------------------------------

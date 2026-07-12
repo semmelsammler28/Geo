@@ -5,11 +5,16 @@
   "type": "module",
   "description": "Datenfundament der Geo Lernapp v2 (Schema, Ingestion, Validierung).",
   "scripts": {
-    "fetch": "node scripts/fetch-countries.mjs",
+    "build": "node scripts/build-countries.mjs",
+    "refresh": "node scripts/refresh-countries.mjs",
     "validate": "node scripts/validate-countries.mjs"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1"
+  },
+  "dependencies": {
+    "country-json": "^1.1.2",
+    "world-countries": "^5.1.0"
   }
 }
