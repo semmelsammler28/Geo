@@ -1,0 +1,260 @@
+[
+  {
+    "id": "BOL",
+    "names": { "common": "Bolivien", "official": "Plurinationaler Staat Bolivien", "de": "Bolivien" },
+    "codes": { "cca2": "BO", "cca3": "BOL", "ccn3": "068" },
+    "flag": { "emoji": "🇧🇴" },
+    "status": { "unMembership": "member" },
+    "capitals": [
+      { "name": "La Paz", "type": "administrative", "isPrimaryForQuiz": true },
+      { "name": "Sucre", "type": "constitutional", "isPrimaryForQuiz": false }
+    ],
+    "geography": {
+      "continent": "South America",
+      "subregion": "South America",
+      "coordinates": { "lat": -17, "lng": -65 },
+      "neighbors": ["BRA", "PRY", "ARG", "CHL", "PER"],
+      "landlocked": true,
+      "area": { "value": 1098581 },
+      "timezones": ["UTC-04:00"]
+    },
+    "economy": { "currencies": [{ "code": "BOB", "name": "Bolivianischer Boliviano", "symbol": "Bs." }] },
+    "society": {
+      "officialLanguages": ["Spanisch", "Quechua", "Aymara", "Guaraní"],
+      "population": { "value": 12006031, "asOf": 2024 }
+    },
+    "funFacts": ["Verfassungssitz (Sucre) und Regierungssitz (La Paz) sind getrennt."],
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "DEU",
+    "names": { "common": "Deutschland", "official": "Bundesrepublik Deutschland", "de": "Deutschland" },
+    "codes": { "cca2": "DE", "cca3": "DEU", "ccn3": "276" },
+    "flag": { "emoji": "🇩🇪" },
+    "status": { "unMembership": "member", "independenceYear": 1871 },
+    "capitals": [{ "name": "Berlin", "type": "administrative", "isPrimaryForQuiz": true }],
+    "geography": {
+      "continent": "Europe",
+      "subregion": "Western Europe",
+      "coordinates": { "lat": 51, "lng": 9 },
+      "neighbors": ["DNK", "POL", "CZE", "AUT", "CHE", "FRA", "LUX", "BEL", "NLD"],
+      "landlocked": false,
+      "area": { "value": 357114 },
+      "timezones": ["UTC+01:00"]
+    },
+    "politics": {
+      "governmentForm": "Parlamentarische Bundesrepublik",
+      "alliances": ["EU", "NATO", "Schengen", "G7"]
+    },
+    "economy": {
+      "hdi": { "value": 0.95, "asOf": 2022 },
+      "currencies": [{ "code": "EUR", "name": "Euro", "symbol": "€" }]
+    },
+    "society": {
+      "officialLanguages": ["Deutsch"],
+      "population": { "value": 83294633, "asOf": 2024 }
+    },
+    "practical": { "callingCode": "+49", "carSigns": ["D"], "drivingSide": "right", "internetTld": [".de"] },
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "ISR",
+    "names": { "common": "Israel", "official": "Staat Israel", "de": "Israel" },
+    "codes": { "cca2": "IL", "cca3": "ISR", "ccn3": "376" },
+    "flag": { "emoji": "🇮🇱" },
+    "status": { "unMembership": "member" },
+    "capitals": [
+      {
+        "name": "Jerusalem",
+        "type": "administrative",
+        "isPrimaryForQuiz": true,
+        "disputed": true,
+        "disputeNote": "Von Israel als Hauptstadt geführt; völkerrechtlich umstritten, die meisten Staaten unterhalten Botschaften in Tel Aviv."
+      }
+    ],
+    "geography": {
+      "continent": "Asia",
+      "subregion": "Western Asia",
+      "coordinates": { "lat": 31.5, "lng": 34.75 },
+      "neighbors": ["LBN", "SYR", "JOR", "EGY", "PSE"],
+      "landlocked": false,
+      "area": { "value": 20770 },
+      "timezones": ["UTC+02:00"]
+    },
+    "economy": { "currencies": [{ "code": "ILS", "name": "Israelischer Schekel", "symbol": "₪" }] },
+    "society": {
+      "officialLanguages": ["Hebräisch"],
+      "population": { "value": 9757930, "asOf": 2024 }
+    },
+    "disputes": [
+      { "field": "capitals", "note": "Hauptstadtstatus Jerusalems ist völkerrechtlich umstritten." }
+    ],
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "MCO",
+    "names": { "common": "Monaco", "official": "Fürstentum Monaco", "de": "Monaco" },
+    "codes": { "cca2": "MC", "cca3": "MCO", "ccn3": "492" },
+    "flag": { "emoji": "🇲🇨" },
+    "status": { "unMembership": "member" },
+    "capitals": [{ "name": "Monaco", "type": "administrative", "isPrimaryForQuiz": true }],
+    "geography": {
+      "continent": "Europe",
+      "subregion": "Western Europe",
+      "coordinates": { "lat": 43.73, "lng": 7.42 },
+      "neighbors": ["FRA"],
+      "landlocked": false,
+      "area": { "value": 2.02 },
+      "timezones": ["UTC+01:00"]
+    },
+    "economy": { "currencies": [{ "code": "EUR", "name": "Euro", "symbol": "€" }] },
+    "society": {
+      "officialLanguages": ["Französisch"],
+      "population": { "value": 38000, "asOf": 2024 }
+    },
+    "funFacts": ["Mit rund 19.000 Einwohnern/km² der am dichtesten besiedelte Staat der Erde."],
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "NLD",
+    "names": { "common": "Niederlande", "official": "Königreich der Niederlande", "de": "Niederlande" },
+    "codes": { "cca2": "NL", "cca3": "NLD", "ccn3": "528" },
+    "flag": { "emoji": "🇳🇱" },
+    "status": { "unMembership": "member" },
+    "capitals": [
+      { "name": "Amsterdam", "type": "constitutional", "isPrimaryForQuiz": true },
+      { "name": "Den Haag", "type": "administrative", "isPrimaryForQuiz": false }
+    ],
+    "geography": {
+      "continent": "Europe",
+      "subregion": "Western Europe",
+      "coordinates": { "lat": 52.5, "lng": 5.75 },
+      "neighbors": ["DEU", "BEL"],
+      "landlocked": false,
+      "area": { "value": 41850 },
+      "timezones": ["UTC+01:00"]
+    },
+    "dependencies": ["Aruba", "Curaçao", "Sint Maarten", "Karibische Niederlande"],
+    "economy": { "currencies": [{ "code": "EUR", "name": "Euro", "symbol": "€" }] },
+    "society": {
+      "officialLanguages": ["Niederländisch"],
+      "population": { "value": 17618299, "asOf": 2024 }
+    },
+    "funFacts": ["Amsterdam ist verfassungsmäßige Hauptstadt, Regierungssitz ist Den Haag."],
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "TWN",
+    "names": { "common": "Taiwan", "official": "Republik China (Taiwan)", "de": "Taiwan" },
+    "codes": { "cca2": "TW", "cca3": "TWN", "ccn3": "158" },
+    "flag": { "emoji": "🇹🇼" },
+    "status": {
+      "unMembership": "non-member",
+      "sovereigntyNote": "De-facto souverän, kein UN-Mitglied; von der VR China beansprucht."
+    },
+    "capitals": [{ "name": "Taipeh", "type": "administrative", "isPrimaryForQuiz": true }],
+    "geography": {
+      "continent": "Asia",
+      "subregion": "Eastern Asia",
+      "coordinates": { "lat": 23.5, "lng": 121 },
+      "neighbors": [],
+      "landlocked": false,
+      "area": { "value": 36193 },
+      "timezones": ["UTC+08:00"]
+    },
+    "economy": { "currencies": [{ "code": "TWD", "name": "Neuer Taiwan-Dollar", "symbol": "NT$" }] },
+    "society": {
+      "officialLanguages": ["Mandarin-Chinesisch"],
+      "population": { "value": 23923276, "asOf": 2024 }
+    },
+    "disputes": [
+      { "field": "status.sovereignty", "note": "Der völkerrechtliche Status Taiwans ist umstritten; die VR China beansprucht die Insel." }
+    ],
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "VAT",
+    "names": { "common": "Vatikanstadt", "official": "Staat Vatikanstadt", "de": "Vatikanstadt" },
+    "codes": { "cca2": "VA", "cca3": "VAT", "ccn3": "336" },
+    "flag": { "emoji": "🇻🇦" },
+    "status": {
+      "unMembership": "observer",
+      "sovereigntyNote": "UN-Beobachterstaat (Heiliger Stuhl)."
+    },
+    "capitals": [{ "name": "Vatikanstadt", "type": "administrative", "isPrimaryForQuiz": true }],
+    "geography": {
+      "continent": "Europe",
+      "subregion": "Southern Europe",
+      "coordinates": { "lat": 41.9, "lng": 12.45 },
+      "neighbors": ["ITA"],
+      "landlocked": true,
+      "area": { "value": 0.49 },
+      "timezones": ["UTC+01:00"]
+    },
+    "economy": { "currencies": [{ "code": "EUR", "name": "Euro", "symbol": "€" }] },
+    "society": {
+      "officialLanguages": ["Italienisch", "Latein"],
+      "population": { "value": 764, "asOf": 2024 }
+    },
+    "funFacts": ["Kleinster allgemein anerkannter Staat der Erde."],
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "XKX",
+    "names": { "common": "Kosovo", "official": "Republik Kosovo", "de": "Kosovo" },
+    "codes": { "cca2": "XK", "cca3": "XKX" },
+    "flag": { "emoji": "🇽🇰" },
+    "status": {
+      "unMembership": "non-member",
+      "sovereigntyNote": "Von rund 100 UN-Staaten anerkannt; Serbien und weitere erkennen nicht an.",
+      "independenceYear": 2008
+    },
+    "capitals": [{ "name": "Pristina", "type": "administrative", "isPrimaryForQuiz": true }],
+    "geography": {
+      "continent": "Europe",
+      "subregion": "Southeast Europe",
+      "coordinates": { "lat": 42.6, "lng": 20.9 },
+      "neighbors": ["SRB", "MNE", "ALB", "MKD"],
+      "landlocked": true,
+      "area": { "value": 10887 },
+      "timezones": ["UTC+01:00"]
+    },
+    "economy": { "currencies": [{ "code": "EUR", "name": "Euro", "symbol": "€" }] },
+    "society": {
+      "officialLanguages": ["Albanisch", "Serbisch"],
+      "population": { "value": 1802020, "asOf": 2024 }
+    },
+    "disputes": [
+      { "field": "status.sovereignty", "note": "Die Unabhängigkeit Kosovos wird nicht von allen Staaten anerkannt (u. a. Serbien)." }
+    ],
+    "dataSnapshot": 2024
+  },
+  {
+    "id": "ZAF",
+    "names": { "common": "Südafrika", "official": "Republik Südafrika", "de": "Südafrika" },
+    "codes": { "cca2": "ZA", "cca3": "ZAF", "ccn3": "710" },
+    "flag": { "emoji": "🇿🇦" },
+    "status": { "unMembership": "member" },
+    "capitals": [
+      { "name": "Pretoria", "type": "administrative", "isPrimaryForQuiz": true },
+      { "name": "Kapstadt", "type": "legislative", "isPrimaryForQuiz": false },
+      { "name": "Bloemfontein", "type": "judicial", "isPrimaryForQuiz": false }
+    ],
+    "geography": {
+      "continent": "Africa",
+      "subregion": "Southern Africa",
+      "coordinates": { "lat": -29, "lng": 24 },
+      "neighbors": ["NAM", "BWA", "ZWE", "MOZ", "SWZ", "LSO"],
+      "landlocked": false,
+      "area": { "value": 1221037 },
+      "timezones": ["UTC+02:00"]
+    },
+    "economy": { "currencies": [{ "code": "ZAR", "name": "Südafrikanischer Rand", "symbol": "R" }] },
+    "society": {
+      "officialLanguages": ["Afrikaans", "Englisch", "Zulu", "Xhosa", "Sotho", "Tswana", "Venda", "Tsonga", "Swazi", "Ndebele", "Nord-Sotho"],
+      "population": { "value": 60414495, "asOf": 2024 }
+    },
+    "funFacts": ["Drei Hauptstädte: Verwaltung (Pretoria), Parlament (Kapstadt), Justiz (Bloemfontein)."],
+    "dataSnapshot": 2024
+  }
+]

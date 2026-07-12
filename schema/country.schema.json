@@ -1,0 +1,299 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geo-lernapp/schema/country.schema.json",
+  "title": "Country",
+  "description": "Quelle der Wahrheit für einen Länder-Datensatz der Geo Lernapp v2. Siehe GEO_APP_BRIEFING.md Abschnitt 3 (Datenmodell) und 2.1 (fixierte Scope-Entscheidungen). additionalProperties ist bewusst überall false, um Tippfehler in Feldnamen bei 196 Ländern zu fangen.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "names",
+    "codes",
+    "flag",
+    "status",
+    "capitals",
+    "geography",
+    "society",
+    "economy",
+    "dataSnapshot"
+  ],
+  "properties": {
+    "id": {
+      "description": "Primärschlüssel = ISO-3166-1 alpha-3 (cca3), z. B. 'DEU'. Für Kosovo/Taiwan die üblichen inoffiziellen Codes (XKX/TWN).",
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["common"],
+      "properties": {
+        "common": { "type": "string", "minLength": 1 },
+        "official": { "type": "string" },
+        "de": {
+          "description": "Deutscher Ländername für die UI (REST Countries: translations.deu.common).",
+          "type": "string"
+        }
+      }
+    },
+    "codes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cca3"],
+      "properties": {
+        "cca2": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "cca3": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "ccn3": { "type": "string", "pattern": "^[0-9]{3}$" }
+      }
+    },
+    "flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "emoji": { "type": "string" },
+        "svgUrl": { "type": "string", "format": "uri" }
+      }
+    },
+    "status": {
+      "description": "Souveränitäts- und Mitgliedschaftsstatus. Entscheidung 2.1: 195 UN + Taiwan = 196 Records.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unMembership"],
+      "properties": {
+        "unMembership": {
+          "description": "member = 193 Mitglieder; observer = Vatikan/Palästina; non-member = Taiwan, Kosovo.",
+          "enum": ["member", "observer", "non-member"]
+        },
+        "sovereigntyNote": {
+          "description": "Kurzer neutraler Hinweis zum Status (z. B. Taiwan De-facto-Souveränität, Kosovo umstrittene Anerkennung).",
+          "type": "string"
+        },
+        "independenceYear": { "type": "integer", "minimum": -3000, "maximum": 2100 }
+      }
+    },
+    "dependencies": {
+      "description": "Abhängige Gebiete, die NICHT als eigene Länder geführt werden (Entscheidung 2.1), aber beim Mutterstaat als Zusatzinfo erscheinen. Z. B. bei DNK: ['Grönland', 'Färöer'].",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "capitals": {
+      "description": "Mehrfach-Hauptstädte als Array (Entscheidung 2.1). Genau ein Eintrag muss isPrimaryForQuiz=true haben (Quiz-Eindeutigkeit) — geprüft im Validierungsskript.",
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "type", "isPrimaryForQuiz"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "type": {
+            "description": "administrative = Regierungssitz; legislative = Parlamentssitz; judicial = Gerichtssitz; constitutional = verfassungsmäßige Hauptstadt.",
+            "enum": ["administrative", "legislative", "judicial", "constitutional"]
+          },
+          "isPrimaryForQuiz": {
+            "description": "Die im Quiz abgefragte Hauptstadt (i. d. R. der Regierungssitz).",
+            "type": "boolean"
+          },
+          "disputed": { "type": "boolean" },
+          "disputeNote": { "type": "string" }
+        }
+      }
+    },
+    "geography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["continent", "subregion", "coordinates", "neighbors", "landlocked", "timezones"],
+      "properties": {
+        "continent": {
+          "enum": ["Africa", "Antarctica", "Asia", "Europe", "North America", "Oceania", "South America"]
+        },
+        "subregion": { "type": "string" },
+        "coordinates": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["lat", "lng"],
+          "properties": {
+            "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+            "lng": { "type": "number", "minimum": -180, "maximum": 180 }
+          }
+        },
+        "neighbors": {
+          "description": "Nachbarländer als cca3-IDs. Referentielle Integrität wird im Validierungsskript geprüft.",
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[A-Z]{3}$" }
+        },
+        "landlocked": {
+          "description": "true = Binnenstaat (keine Küstenlinie). Küstenlinie ja/nein = !landlocked.",
+          "type": "boolean"
+        },
+        "area": {
+          "description": "Fläche in km². Pflicht-Kernstat, im Validierungsskript für Dichte-Plausibilität genutzt.",
+          "allOf": [{ "$ref": "#/$defs/measuredNumber" }]
+        },
+        "highestPoint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string" },
+            "elevationM": { "type": "number" }
+          }
+        },
+        "largestWaterBody": {
+          "description": "Größter Fluss oder See.",
+          "type": "string"
+        },
+        "climateZones": { "type": "array", "items": { "type": "string" } },
+        "timezones": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "politics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "governmentForm": { "type": "string" },
+        "headOfState": { "$ref": "#/$defs/officeHolder" },
+        "headOfGovernment": { "$ref": "#/$defs/officeHolder" },
+        "alliances": {
+          "description": "Wichtige Bündnisse, z. B. ['EU', 'NATO', 'Schengen'].",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "economy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currencies"],
+      "properties": {
+        "gdpUsd": { "$ref": "#/$defs/measuredNumber" },
+        "gdpPerCapitaUsd": { "$ref": "#/$defs/measuredNumber" },
+        "hdi": {
+          "allOf": [{ "$ref": "#/$defs/measuredNumber" }],
+          "description": "Human Development Index, 0–1."
+        },
+        "currencies": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["code"],
+            "properties": {
+              "code": { "type": "string" },
+              "name": { "type": "string" },
+              "symbol": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "society": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["officialLanguages", "population"],
+      "properties": {
+        "population": { "$ref": "#/$defs/measuredNumber" },
+        "officialLanguages": { "type": "array", "items": { "type": "string" }, "minItems": 0 },
+        "otherLanguages": { "type": "array", "items": { "type": "string" } },
+        "mainReligions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "sharePercent": { "type": "number", "minimum": 0, "maximum": 100 }
+            }
+          }
+        },
+        "lifeExpectancyYears": { "$ref": "#/$defs/measuredNumber" }
+      }
+    },
+    "practical": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "callingCode": { "description": "Telefonvorwahl inkl. +, z. B. '+49'.", "type": "string" },
+        "carSigns": { "description": "Kfz-Länderkennzeichen, z. B. ['D'].", "type": "array", "items": { "type": "string" } },
+        "drivingSide": { "enum": ["left", "right"] },
+        "plugTypes": { "description": "Steckertypen, z. B. ['C', 'F'].", "type": "array", "items": { "type": "string" } },
+        "internetTld": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "culture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "landmarks": { "type": "array", "items": { "type": "string" } },
+        "unescoSites": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["count"],
+          "properties": {
+            "count": { "type": "integer", "minimum": 0 },
+            "examples": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "nationalDish": { "type": "string" },
+        "nationalDay": { "type": "string" }
+      }
+    },
+    "funFacts": {
+      "description": "Kuriositäten für 'Wusstest du?' — Exklaven, kein Meerzugang, mehrere Zeitzonen, kein stehendes Militär etc.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "disputes": {
+      "description": "Länderübergreifende Streitstände (Entscheidung 2.1), die kein einzelnes Wertfeld betreffen — z. B. Kosovo-Anerkennung, Westsahara. Die Quiz-Engine liest diese Liste, um betroffene Felder als 'Info, nicht abfragbar' zu behandeln.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "note"],
+        "properties": {
+          "field": {
+            "description": "Pfad des betroffenen Feldes, z. B. 'status.sovereignty', 'capitals'.",
+            "type": "string"
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "dataSnapshot": {
+      "description": "Globaler Datenstand (Jahr) für dieses Land (Entscheidung 2.1). Einzelne Felder dürfen über measuredNumber.asOf abweichen.",
+      "type": "integer",
+      "minimum": 1990,
+      "maximum": 2100
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "measuredNumber": {
+      "description": "Ein Zahlenwert, der sich ändern kann. asOf überschreibt den globalen dataSnapshot; disputed markiert strittige Werte (Entscheidung 2.1).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": { "type": "number" },
+        "asOf": { "type": "integer", "minimum": 1990, "maximum": 2100 },
+        "disputed": { "type": "boolean" },
+        "disputeNote": { "type": "string" }
+      }
+    },
+    "officeHolder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "name"],
+      "properties": {
+        "title": { "type": "string" },
+        "name": { "type": "string" },
+        "asOf": { "type": "integer", "minimum": 1990, "maximum": 2100 }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "geo-lernapp-data",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Datenfundament der Geo Lernapp v2 (Schema, Ingestion, Validierung).",
+  "scripts": {
+    "fetch": "node scripts/fetch-countries.mjs",
+    "validate": "node scripts/validate-countries.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
