@@ -1,18 +1,22 @@
-import { useState } from "react";
-import { countries, getCountry } from "../data/countries";
+import { getCountry } from "../data/countries";
 import { CountryList } from "./CountryList";
 import { Steckbrief } from "./Steckbrief";
 
-const DEFAULT_ID = getCountry("DEU") ? "DEU" : countries[0]?.id ?? null;
-
-export function ExploreView({ onCompare }: { onCompare: (id: string) => void }) {
-  const [selectedId, setSelectedId] = useState<string | null>(DEFAULT_ID);
+export function ExploreView({
+  selectedId,
+  onSelect,
+  onCompare,
+}: {
+  selectedId: string | null;
+  onSelect: (id: string) => void;
+  onCompare: (id: string) => void;
+}) {
   const country = selectedId ? getCountry(selectedId) : undefined;
 
   return (
     <div className="explore">
       <aside className="sidebar">
-        <CountryList selectedId={selectedId} onSelect={setSelectedId} />
+        <CountryList selectedId={selectedId} onSelect={onSelect} />
       </aside>
       <main className="main">
         {country ? (

@@ -1,23 +1,34 @@
 import { useState } from "react";
+import { getCountry, countries } from "./data/countries";
 import { ExploreView } from "./components/ExploreView";
 import { CompareView } from "./components/CompareView";
 import { RankingsView } from "./components/RankingsView";
+import { QuizView } from "./components/QuizView";
 
-type View = "explore" | "compare" | "rankings";
+type View = "explore" | "compare" | "rankings" | "quiz";
 
 const TABS: { key: View; label: string }[] = [
   { key: "explore", label: "Steckbrief" },
   { key: "compare", label: "Vergleich" },
   { key: "rankings", label: "Rankings" },
+  { key: "quiz", label: "Quiz" },
 ];
+
+const DEFAULT_ID = getCountry("DEU") ? "DEU" : countries[0]?.id ?? null;
 
 export function App() {
   const [view, setView] = useState<View>("explore");
   const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [selectedId, setSelectedId] = useState<string | null>(DEFAULT_ID);
 
   const startCompare = (id: string) => {
     setCompareIds((prev) => (prev.includes(id) ? prev : [...prev, id]).slice(0, 4));
     setView("compare");
+  };
+
+  const openCountry = (id: string) => {
+    setSelectedId(id);
+    setView("explore");
   };
 
   return (
@@ -41,9 +52,12 @@ export function App() {
       </header>
 
       <div className="view">
-        {view === "explore" && <ExploreView onCompare={startCompare} />}
+        {view === "explore" && (
+          <ExploreView selectedId={selectedId} onSelect={setSelectedId} onCompare={startCompare} />
+        )}
         {view === "compare" && <CompareView ids={compareIds} setIds={setCompareIds} />}
         {view === "rankings" && <RankingsView />}
+        {view === "quiz" && <QuizView onOpenCountry={openCountry} />}
       </div>
     </div>
   );
