@@ -1,6 +1,10 @@
 import { useMemo, useState } from "react";
 import { countries } from "../data/countries";
 import { generateQuiz, type Difficulty, type Question, type QuizType } from "../logic/quiz-engine";
+import { grade as gradeMastery, weight as masteryWeight, type Topic } from "../logic/mastery";
+
+const MASTERABLE: Topic[] = ["capitals", "flags", "continents"];
+const isTopic = (t: string): t is Topic => (MASTERABLE as string[]).includes(t);
 
 const MODES: { key: QuizType; label: string }[] = [
   { key: "capitals", label: "Hauptstädte" },
@@ -29,7 +33,8 @@ export function QuizView({ onOpenCountry }: { onOpenCountry: (id: string) => voi
   const [chosen, setChosen] = useState<string | null>(null);
 
   const start = () => {
-    const qs = generateQuiz(countries, { type, difficulty, count: COUNT });
+    // adaptiv: schwache/ungesehene Länder häufiger fragen (geteilte Mastery-Schicht)
+    const qs = generateQuiz(countries, { type, difficulty, count: COUNT }, Math.random, masteryWeight);
     setQuestions(qs);
     setIndex(0);
     setAnswers([]);
@@ -45,6 +50,8 @@ export function QuizView({ onOpenCountry }: { onOpenCountry: (id: string) => voi
     const isCorrect = q.options.find((o) => o.label === label)?.correct ?? false;
     setChosen(label);
     setAnswers((prev) => [...prev, { q, chosen: label, correct: isCorrect }]);
+    // Mastery aktualisieren (nur für Themen mit Karteikarten-Pendant)
+    if (isTopic(q.type)) gradeMastery(q.type, q.subjectId, isCorrect ? "good" : "again");
   };
 
   const next = () => {

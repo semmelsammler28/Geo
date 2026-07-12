@@ -4,14 +4,16 @@ import { ExploreView } from "./components/ExploreView";
 import { CompareView } from "./components/CompareView";
 import { RankingsView } from "./components/RankingsView";
 import { QuizView } from "./components/QuizView";
+import { FlashcardsView } from "./components/FlashcardsView";
 
-type View = "explore" | "compare" | "rankings" | "quiz";
+type View = "explore" | "compare" | "rankings" | "quiz" | "flashcards";
 
 const TABS: { key: View; label: string }[] = [
   { key: "explore", label: "Steckbrief" },
   { key: "compare", label: "Vergleich" },
   { key: "rankings", label: "Rankings" },
   { key: "quiz", label: "Quiz" },
+  { key: "flashcards", label: "Karteikarten" },
 ];
 
 const DEFAULT_ID = getCountry("DEU") ? "DEU" : countries[0]?.id ?? null;
@@ -58,6 +60,7 @@ export function App() {
         {view === "compare" && <CompareView ids={compareIds} setIds={setCompareIds} />}
         {view === "rankings" && <RankingsView />}
         {view === "quiz" && <QuizView onOpenCountry={openCountry} />}
+        {view === "flashcards" && <FlashcardsView />}
       </div>
     </div>
   );

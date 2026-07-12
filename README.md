@@ -42,7 +42,13 @@ Details zur Datenpipeline: `docs/DATEN-PIPELINE.md`.
 
 ## Stand
 
-- **Datenfundament** (Briefing Schritt 2): Schema, Ingestion, Validierung — 197
-  Länder, 0 Validierungsfehler.
-- **Länder-Steckbrief** (Briefing Schritt 3): Detailansicht pro Land mit allen
+- **Datenfundament** (Schritt 2): Schema, Ingestion, Validierung — 197 Länder,
+  0 Validierungsfehler.
+- **Länder-Steckbrief** (Schritt 3): Detailansicht pro Land mit allen
   Datenkategorien, durchsuchbare Länderliste.
+- **Vergleich + Rankings** (Schritt 4): 2–4 Länder mit visuellen Balken;
+  sortierbare Rankings mit Perzentil-Einordnung.
+- **Quiz-Engine** (Schritt 5): Hauptstädte/Flaggen/Kontinente/Bevölkerung/Fläche/
+  Gemischt mit Ähnlichkeits-/Distraktor-Logik; Fehleranalyse mit Steckbrief-Sprung.
+- **Karteikarten + Mastery** (Schritt 6): Spaced Repetition (SM-2-artig),
+  lokal persistiert; geteilte Mastery-Schicht macht auch das Quiz adaptiv.

@@ -14,6 +14,25 @@ import {
 export type QuizType = "capitals" | "flags" | "continents" | "population" | "area" | "mixed";
 export type Difficulty = "easy" | "hard";
 
+/** Optionale Gewichtung der Fragenauswahl (adaptiv, aus der Mastery-Schicht). */
+export type WeightFn = (topic: "capitals" | "flags" | "continents", id: string) => number;
+
+function weightedPick<T extends { id: string }>(
+  pool: T[],
+  rng: Rng,
+  weightOf: (item: T) => number
+): T {
+  const weights = pool.map((x) => Math.max(0, weightOf(x)));
+  const total = weights.reduce((a, b) => a + b, 0);
+  if (total <= 0) return pool[Math.floor(rng() * pool.length)];
+  let r = rng() * total;
+  for (let i = 0; i < pool.length; i++) {
+    r -= weights[i];
+    if (r <= 0) return pool[i];
+  }
+  return pool[pool.length - 1];
+}
+
 export interface QuizOption {
   label: string;
   correct: boolean;
@@ -79,10 +98,10 @@ function distinctLabels(
   return out;
 }
 
-function capitalsQuestion(all: Country[], diff: Difficulty, rng: Rng): Question | null {
+function capitalsQuestion(all: Country[], diff: Difficulty, rng: Rng, weightFor?: WeightFn): Question | null {
   const pool = all.filter(capitalQuizzable);
   if (pool.length < 4) return null;
-  const subject = pool[Math.floor(rng() * pool.length)];
+  const subject = weightedPick(pool, rng, (c) => (weightFor ? weightFor("capitals", c.id) : 1));
   const correct = primaryCapital(subject).name;
 
   // Hard: Distraktoren aus derselben Region (verwechselbarer). Easy: irgendwoher.
@@ -102,10 +121,10 @@ function capitalsQuestion(all: Country[], diff: Difficulty, rng: Rng): Question 
   };
 }
 
-function flagsQuestion(all: Country[], diff: Difficulty, rng: Rng): Question | null {
+function flagsQuestion(all: Country[], diff: Difficulty, rng: Rng, weightFor?: WeightFn): Question | null {
   const pool = all.filter((c) => c.flag.emoji);
   if (pool.length < 4) return null;
-  const subject = pool[Math.floor(rng() * pool.length)];
+  const subject = weightedPick(pool, rng, (c) => (weightFor ? weightFor("flags", c.id) : 1));
   const correct = displayName(subject);
 
   let candidates: Country[];
@@ -135,7 +154,7 @@ function flagsQuestion(all: Country[], diff: Difficulty, rng: Rng): Question | n
   };
 }
 
-function continentsQuestion(all: Country[], diff: Difficulty, rng: Rng): Question | null {
+function continentsQuestion(all: Country[], diff: Difficulty, rng: Rng, weightFor?: WeightFn): Question | null {
   // Hard: transkontinentale Grenzfälle bevorzugen (aber nicht ausschließlich,
   // sonst reichen die wenigen Fälle nicht für ein ganzes Quiz).
   let pool = all;
@@ -143,7 +162,7 @@ function continentsQuestion(all: Country[], diff: Difficulty, rng: Rng): Questio
     const tricky = all.filter((c) => TRANSCONTINENTAL.includes(c.id));
     if (tricky.length) pool = tricky;
   }
-  const subject = pool[Math.floor(rng() * pool.length)];
+  const subject = weightedPick(pool, rng, (c) => (weightFor ? weightFor("continents", c.id) : 1));
   const correct = CONTINENT_DE[subject.geography.continent] ?? subject.geography.continent;
   const others = CONTINENTS.filter((k) => k !== subject.geography.continent).map((k) => CONTINENT_DE[k]);
   const distractors = pickN(others, 3, rng);
@@ -188,7 +207,9 @@ function magnitudeQuestion(
   };
 }
 
-const GENERATORS: Record<Exclude<QuizType, "mixed">, (all: Country[], d: Difficulty, r: Rng) => Question | null> = {
+type Generator = (all: Country[], d: Difficulty, r: Rng, w?: WeightFn) => Question | null;
+
+const GENERATORS: Record<Exclude<QuizType, "mixed">, Generator> = {
   capitals: capitalsQuestion,
   flags: flagsQuestion,
   continents: continentsQuestion,
@@ -200,23 +221,30 @@ const GENERATORS: Record<Exclude<QuizType, "mixed">, (all: Country[], d: Difficu
 
 const ALL_TYPES = Object.keys(GENERATORS) as Exclude<QuizType, "mixed">[];
 
-export function generateQuestion(all: Country[], type: QuizType, diff: Difficulty, rng: Rng = Math.random): Question | null {
+export function generateQuestion(
+  all: Country[],
+  type: QuizType,
+  diff: Difficulty,
+  rng: Rng = Math.random,
+  weightFor?: WeightFn
+): Question | null {
   const chosen = type === "mixed" ? ALL_TYPES[Math.floor(rng() * ALL_TYPES.length)] : type;
-  return GENERATORS[chosen](all, diff, rng);
+  return GENERATORS[chosen](all, diff, rng, weightFor);
 }
 
 /** Erzeugt count Fragen; überspringt (seltene) Fehlschläge und dedupt gleiche Subjekte grob. */
 export function generateQuiz(
   all: Country[],
   cfg: { type: QuizType; difficulty: Difficulty; count: number },
-  rng: Rng = Math.random
+  rng: Rng = Math.random,
+  weightFor?: WeightFn
 ): Question[] {
   const questions: Question[] = [];
   const recentSubjects = new Set<string>();
   let guard = 0;
   while (questions.length < cfg.count && guard < cfg.count * 20) {
     guard++;
-    const q = generateQuestion(all, cfg.type, cfg.difficulty, rng);
+    const q = generateQuestion(all, cfg.type, cfg.difficulty, rng, weightFor);
     if (!q) continue;
     const key = `${q.type}:${q.subjectId}`;
     if (recentSubjects.has(key)) continue;
