@@ -35,7 +35,7 @@ API dient nur zum optionalen Auffrischen.
 - **Tier 2 — veränderliche Zahlen**: Bevölkerung + Lebenserwartung offline aus
   npm `country-json` (Stand ~2016, als `asOf` markiert). BIP, BIP/Kopf, HDI,
   Zeitzonen, Fahrseite sind offline **nicht** verfügbar → Lücken (siehe
-  `data/_gaps.json`), auffrischbar per `npm run refresh` (Zeitzonen, Fahrseite,
+  `data/_gaps.json`), auffrischbar per `npm run data:refresh` (Zeitzonen, Fahrseite,
   frische Bevölkerung) bzw. später kuratiert (BIP/HDI).
 - **Tier 3 — qualitativ/Factbook** (kuratiert, kein sauberer Feed):
   Regierungschef, Regierungsform, Bündnisse, Klima, höchster Punkt, größter
@@ -44,13 +44,13 @@ API dient nur zum optionalen Auffrischen.
 ## Verwendung
 
 ```bash
-npm install          # Abhängigkeiten (world-countries, country-json, ajv)
-npm run build        # Offline: baut alle 197 Länder -> data/countries.json + _gaps.json
-npm run validate     # Schema- und Plausibilitätscheck
-npm run refresh      # optional, braucht Netz: frische Zahlen aus REST Countries als Overlay
+npm install            # Abhängigkeiten (world-countries, country-json, ajv, …)
+npm run data:build     # Offline: baut alle 197 Länder -> data/countries.json + _gaps.json
+npm run data:validate  # Schema- und Plausibilitätscheck
+npm run data:refresh   # optional, braucht Netz: frische Zahlen aus REST Countries als Overlay
 ```
 
-`npm run refresh` überschreibt **nur** `society.population` (mit aktuellem
+`npm run data:refresh` überschreibt **nur** `society.population` (mit aktuellem
 `asOf`), `geography.timezones` und `practical.drivingSide/carSigns`. Struktur,
 Namen, Hauptstädte-Kuratierung, Status und Streitstände aus dem Build bleiben
 unangetastet. In dieser Umgebung schlägt `refresh` mit 403 fehl (Proxy) — lokal
@@ -58,9 +58,9 @@ ausführen.
 
 ## Aktueller Stand
 
-`npm run build && npm run validate` → **197 Länder, 0 Fehler**. Die Warnungen
+`npm run data:build && npm run data:validate` → **197 Länder, 0 Fehler**. Die Warnungen
 sind ausschließlich Tier-2-Lücken (aktuell fehlende Zeitzonen an allen Ländern);
-Bevölkerung ist für alle 197 gesetzt. Nach `npm run refresh` verschwinden die
+Bevölkerung ist für alle 197 gesetzt. Nach `npm run data:refresh` verschwinden die
 Zeitzonen-Warnungen.
 
 Status-Verteilung: 193 member · 2 observer (VAT, PSE) · 2 non-member (TWN, XKX).

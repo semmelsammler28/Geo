@@ -1,20 +1,31 @@
 {
-  "name": "geo-lernapp-data",
+  "name": "geo-lernapp",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Datenfundament der Geo Lernapp v2 (Schema, Ingestion, Validierung).",
+  "description": "Geo Lernapp v2 — Länder erkunden, vergleichen, einordnen, lernen.",
   "scripts": {
-    "build": "node scripts/build-countries.mjs",
-    "refresh": "node scripts/refresh-countries.mjs",
-    "validate": "node scripts/validate-countries.mjs"
-  },
-  "devDependencies": {
-    "ajv": "^8.17.1",
-    "ajv-formats": "^3.0.1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "data:build": "node scripts/build-countries.mjs",
+    "data:refresh": "node scripts/refresh-countries.mjs",
+    "data:validate": "node scripts/validate-countries.mjs"
   },
   "dependencies": {
     "country-json": "^1.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "world-countries": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
   }
 }
