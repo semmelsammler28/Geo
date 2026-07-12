@@ -2,6 +2,13 @@ import { useMemo, useState } from "react";
 import { countries } from "../data/countries";
 import { generateQuiz, type Difficulty, type Question, type QuizType } from "../logic/quiz-engine";
 import { grade as gradeMastery, weight as masteryWeight, type Topic } from "../logic/mastery";
+import { addResult, bestRate, getResults } from "../logic/history";
+
+const dateFmt = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+const MODE_LABEL: Record<string, string> = {
+  capitals: "Hauptstädte", flags: "Flaggen", continents: "Kontinente",
+  population: "Bevölkerung", area: "Fläche", mixed: "Gemischt",
+};
 
 const MASTERABLE: Topic[] = ["capitals", "flags", "continents"];
 const isTopic = (t: string): t is Topic => (MASTERABLE as string[]).includes(t);
@@ -56,6 +63,7 @@ export function QuizView({ onOpenCountry }: { onOpenCountry: (id: string) => voi
 
   const next = () => {
     if (index + 1 >= questions.length) {
+      addResult({ type, difficulty, score, total: questions.length });
       setPhase("done");
     } else {
       setIndex((i) => i + 1);
@@ -85,7 +93,27 @@ export function QuizView({ onOpenCountry }: { onOpenCountry: (id: string) => voi
           <button className={difficulty === "easy" ? "seg active" : "seg"} onClick={() => setDifficulty("easy")}>Einfach</button>
           <button className={difficulty === "hard" ? "seg active" : "seg"} onClick={() => setDifficulty("hard")}>Schwer</button>
         </div>
+        {(() => {
+          const best = bestRate(type);
+          return best != null ? (
+            <p className="quiz-best">Bestwert in {MODE_LABEL[type]}: {Math.round(best * 100)} %</p>
+          ) : null;
+        })()}
         <button className="btn-primary" onClick={start}>{COUNT} Fragen starten</button>
+        {getResults().length > 0 ? (
+          <div className="history">
+            <h2>Verlauf</h2>
+            <ul>
+              {getResults().slice(0, 8).map((r, i) => (
+                <li key={i}>
+                  <span className="hist-date">{dateFmt.format(r.ts)}</span>
+                  <span className="hist-mode">{MODE_LABEL[r.type]} · {r.difficulty === "hard" ? "schwer" : "einfach"}</span>
+                  <span className="hist-score">{r.score}/{r.total}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
     );
   }

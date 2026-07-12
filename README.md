@@ -52,3 +52,9 @@ Details zur Datenpipeline: `docs/DATEN-PIPELINE.md`.
   Gemischt mit Ähnlichkeits-/Distraktor-Logik; Fehleranalyse mit Steckbrief-Sprung.
 - **Karteikarten + Mastery** (Schritt 6): Spaced Repetition (SM-2-artig),
   lokal persistiert; geteilte Mastery-Schicht macht auch das Quiz adaptiv.
+- **Interaktive Weltkarte** (Schritt 7): Choropleth nach wählbarer Metrik
+  (offline projiziert aus Natural-Earth-Geometrien), Klick öffnet den Steckbrief.
+- **Politur** (Schritt 8): Ergebnis-Historie der Quiz-Läufe, nach den drei
+  Säulen gruppierte Navigation, Design-Feinschliff.
+
+Alle acht Schritte des Briefings sind umgesetzt.

@@ -9,13 +9,20 @@ import { MapView } from "./components/MapView";
 
 type View = "explore" | "compare" | "rankings" | "map" | "quiz" | "flashcards";
 
-const TABS: { key: View; label: string }[] = [
-  { key: "explore", label: "Steckbrief" },
-  { key: "compare", label: "Vergleich" },
-  { key: "rankings", label: "Rankings" },
-  { key: "map", label: "Karte" },
-  { key: "quiz", label: "Quiz" },
-  { key: "flashcards", label: "Karteikarten" },
+// Gruppiert nach den drei Säulen des Briefings: Erkunden, Einordnen, Lernen.
+const TAB_GROUPS: { pillar: string; tabs: { key: View; label: string }[] }[] = [
+  { pillar: "Erkunden", tabs: [
+    { key: "explore", label: "Steckbrief" },
+    { key: "compare", label: "Vergleich" },
+    { key: "map", label: "Karte" },
+  ] },
+  { pillar: "Einordnen", tabs: [
+    { key: "rankings", label: "Rankings" },
+  ] },
+  { pillar: "Lernen", tabs: [
+    { key: "quiz", label: "Quiz" },
+    { key: "flashcards", label: "Karteikarten" },
+  ] },
 ];
 
 const DEFAULT_ID = getCountry("DEU") ? "DEU" : countries[0]?.id ?? null;
@@ -40,17 +47,26 @@ export function App() {
       <header className="topnav">
         <div className="brand">
           <span className="brand-mark">🌍</span>
-          <span className="brand-name">Geo Lernapp</span>
+          <span className="brand-text">
+            <span className="brand-name">Geo Lernapp</span>
+            <span className="brand-sub">erkunden · einordnen · lernen</span>
+          </span>
         </div>
         <nav className="tabs">
-          {TABS.map((t) => (
-            <button
-              key={t.key}
-              className={view === t.key ? "tab active" : "tab"}
-              onClick={() => setView(t.key)}
-            >
-              {t.label}
-            </button>
+          {TAB_GROUPS.map((g, gi) => (
+            <div className="tab-group" key={g.pillar}>
+              {gi > 0 ? <span className="tab-sep" aria-hidden /> : null}
+              {g.tabs.map((t) => (
+                <button
+                  key={t.key}
+                  className={view === t.key ? "tab active" : "tab"}
+                  onClick={() => setView(t.key)}
+                  title={g.pillar}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
           ))}
         </nav>
       </header>
