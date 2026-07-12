@@ -79,10 +79,8 @@ Das JSON Schema selbst fängt Feldnamen-Tippfehler (`additionalProperties: false
 überall), Enum-Verstöße (Kontinent, Hauptstadt-Typ, `unMembership`), Wertebereiche
 (Koordinaten, Prozentangaben) und fehlende Pflichtfelder.
 
-## Offene Detailfrage
+## Entschiedene Detailfragen
 
-- **Niederlande — Quiz-Hauptstadt**: derzeit `Amsterdam` als
-  `isPrimaryForQuiz` (verfassungsmäßige Hauptstadt, konventionelle Quiz-Antwort),
-  `Den Haag` als Regierungssitz. Entscheidung 2.1 sagt „Regierungssitz = primär",
-  was formal Den Haag wäre. Umstellung ist ein Ein-Zeilen-Change im Override
-  (`scripts/fetch-countries.mjs`) bzw. in den Daten — bei Bedarf durch Laura.
+- **Niederlande — Quiz-Hauptstadt**: `Amsterdam` ist die Quiz-Hauptstadt
+  (verfassungsmäßige Hauptstadt, konventionelle Antwort); `Den Haag` erscheint
+  als Regierungssitz nur im Steckbrief. (Laura, Juli 2026.)

@@ -50,9 +50,9 @@ const CAPITALS_OVERRIDE = {
     { name: "Sucre", type: "constitutional", isPrimaryForQuiz: false },
   ],
   NLD: [
-    // Offene Detailfrage an Laura: Regierungssitz ist Den Haag, konventionelle
-    // Quiz-Antwort ist Amsterdam (verfassungsmäßige Hauptstadt). Vorläufig
-    // Amsterdam als isPrimaryForQuiz; bei Bedarf umstellen.
+    // Laura-Entscheidung: Amsterdam (verfassungsmäßige Hauptstadt, konventionelle
+    // Quiz-Antwort) ist die Quiz-Hauptstadt; Den Haag als Regierungssitz nur im
+    // Steckbrief.
     { name: "Amsterdam", type: "constitutional", isPrimaryForQuiz: true },
     { name: "Den Haag", type: "administrative", isPrimaryForQuiz: false },
   ],
