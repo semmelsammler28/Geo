@@ -1,31 +1,50 @@
 import { useState } from "react";
-import { countries, getCountry } from "./data/countries";
-import { CountryList } from "./components/CountryList";
-import { Steckbrief } from "./components/Steckbrief";
+import { ExploreView } from "./components/ExploreView";
+import { CompareView } from "./components/CompareView";
+import { RankingsView } from "./components/RankingsView";
 
-// Startland: Deutschland, sonst das erste alphabetisch.
-const DEFAULT_ID = getCountry("DEU") ? "DEU" : countries[0]?.id ?? null;
+type View = "explore" | "compare" | "rankings";
+
+const TABS: { key: View; label: string }[] = [
+  { key: "explore", label: "Steckbrief" },
+  { key: "compare", label: "Vergleich" },
+  { key: "rankings", label: "Rankings" },
+];
 
 export function App() {
-  const [selectedId, setSelectedId] = useState<string | null>(DEFAULT_ID);
-  const country = selectedId ? getCountry(selectedId) : undefined;
+  const [view, setView] = useState<View>("explore");
+  const [compareIds, setCompareIds] = useState<string[]>([]);
+
+  const startCompare = (id: string) => {
+    setCompareIds((prev) => (prev.includes(id) ? prev : [...prev, id]).slice(0, 4));
+    setView("compare");
+  };
 
   return (
-    <div className="layout">
-      <aside className="sidebar">
+    <div className="app">
+      <header className="topnav">
         <div className="brand">
           <span className="brand-mark">🌍</span>
           <span className="brand-name">Geo Lernapp</span>
         </div>
-        <CountryList selectedId={selectedId} onSelect={setSelectedId} />
-      </aside>
-      <main className="main">
-        {country ? (
-          <Steckbrief country={country} />
-        ) : (
-          <p className="empty">Kein Land ausgewählt.</p>
-        )}
-      </main>
+        <nav className="tabs">
+          {TABS.map((t) => (
+            <button
+              key={t.key}
+              className={view === t.key ? "tab active" : "tab"}
+              onClick={() => setView(t.key)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </nav>
+      </header>
+
+      <div className="view">
+        {view === "explore" && <ExploreView onCompare={startCompare} />}
+        {view === "compare" && <CompareView ids={compareIds} setIds={setCompareIds} />}
+        {view === "rankings" && <RankingsView />}
+      </div>
     </div>
   );
 }

@@ -14,7 +14,13 @@ function join(list?: string[]): string {
   return list && list.length ? list.join(", ") : "";
 }
 
-export function Steckbrief({ country: c }: { country: Country }) {
+export function Steckbrief({
+  country: c,
+  onCompare,
+}: {
+  country: Country;
+  onCompare?: (id: string) => void;
+}) {
   const geo = c.geography;
   const pol = c.politics ?? {};
   const eco = c.economy;
@@ -40,6 +46,11 @@ export function Steckbrief({ country: c }: { country: Country }) {
           </div>
           {c.status.sovereigntyNote ? (
             <p className="sb-note">{c.status.sovereigntyNote}</p>
+          ) : null}
+          {onCompare ? (
+            <button className="btn-compare" onClick={() => onCompare(c.id)}>
+              Mit anderem Land vergleichen →
+            </button>
           ) : null}
         </div>
       </header>
