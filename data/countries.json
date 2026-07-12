@@ -56,8 +56,8 @@
     "society": {
       "officialLanguages": [
         "Dari",
-        "Pashto",
-        "Turkmen"
+        "Paschtunisch",
+        "Turkmenisch"
       ],
       "population": {
         "value": 37172386,
@@ -134,7 +134,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese"
+        "Portugiesisch"
       ],
       "population": {
         "value": 30809762,
@@ -211,7 +211,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Albanian"
+        "Albanisch"
       ],
       "population": {
         "value": 2866376,
@@ -286,7 +286,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Catalan"
+        "Katalanisch"
       ],
       "population": {
         "value": 77006,
@@ -361,7 +361,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 9630959,
@@ -441,7 +441,7 @@
     "society": {
       "officialLanguages": [
         "Guaraní",
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 44494502,
@@ -518,7 +518,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Armenian"
+        "Armenisch"
       ],
       "population": {
         "value": 2951776,
@@ -590,7 +590,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 96286,
@@ -662,7 +662,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 24982688,
@@ -743,7 +743,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Austro-Bavarian German"
+        "Bairisch"
       ],
       "population": {
         "value": 8840521,
@@ -821,8 +821,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Azerbaijani",
-        "Russian"
+        "Aserbaidschanisch",
+        "Russisch"
       ],
       "population": {
         "value": 9939800,
@@ -898,7 +898,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
+        "Französisch",
         "Kirundi"
       ],
       "population": {
@@ -976,9 +976,9 @@
     },
     "society": {
       "officialLanguages": [
-        "German",
-        "French",
-        "Dutch"
+        "Deutsch",
+        "Französisch",
+        "Niederländisch"
       ],
       "population": {
         "value": 11433256,
@@ -1055,7 +1055,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 11485048,
@@ -1134,7 +1134,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 19751535,
@@ -1209,7 +1209,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Bengali"
+        "Bengalisch"
       ],
       "population": {
         "value": 161356039,
@@ -1287,7 +1287,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Bulgarian"
+        "Bulgarisch"
       ],
       "population": {
         "value": 7025037,
@@ -1359,7 +1359,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 1569439,
@@ -1436,7 +1436,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 385640,
@@ -1512,9 +1512,9 @@
     },
     "society": {
       "officialLanguages": [
-        "Bosnian",
-        "Croatian",
-        "Serbian"
+        "Bosnisch",
+        "Kroatisch",
+        "Serbisch"
       ],
       "population": {
         "value": 3323929,
@@ -1592,8 +1592,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Belarusian",
-        "Russian"
+        "Belarussisch",
+        "Russisch"
       ],
       "population": {
         "value": 9483499,
@@ -1668,9 +1668,9 @@
     },
     "society": {
       "officialLanguages": [
-        "Belizean Creole",
-        "English",
-        "Spanish"
+        "Belize-Kreolisch",
+        "Englisch",
+        "Spanisch"
       ],
       "population": {
         "value": 383071,
@@ -1756,7 +1756,7 @@
         "Aymara",
         "Guaraní",
         "Quechua",
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 11353142,
@@ -1838,7 +1838,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese"
+        "Portugiesisch"
       ],
       "population": {
         "value": 209469333,
@@ -1910,7 +1910,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 286641,
@@ -1989,7 +1989,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Malay"
+        "Malaiisch"
       ],
       "population": {
         "value": 428962,
@@ -2146,7 +2146,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Tswana"
       ],
       "population": {
@@ -2226,7 +2226,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
+        "Französisch",
         "Sango"
       ],
       "population": {
@@ -2301,8 +2301,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "French"
+        "Englisch",
+        "Französisch"
       ],
       "population": {
         "value": 37057765,
@@ -2380,10 +2380,10 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
-        "Swiss German",
-        "Italian",
-        "Romansh"
+        "Französisch",
+        "Schweizerdeutsch",
+        "Italienisch",
+        "Rätoromanisch"
       ],
       "population": {
         "value": 8513227,
@@ -2459,7 +2459,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 18729160,
@@ -2546,7 +2546,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Chinese"
+        "Chinesisch"
       ],
       "population": {
         "value": 1392730000,
@@ -2628,7 +2628,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 25069229,
@@ -2707,8 +2707,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "French"
+        "Englisch",
+        "Französisch"
       ],
       "population": {
         "value": 25216237,
@@ -2790,7 +2790,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
+        "Französisch",
         "Kikongo",
         "Lingala",
         "Tshiluba",
@@ -2868,7 +2868,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
+        "Französisch",
         "Kikongo",
         "Lingala"
       ],
@@ -2948,7 +2948,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 49648685,
@@ -3020,9 +3020,9 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "French",
-        "Comorian"
+        "Arabisch",
+        "Französisch",
+        "Komorisch"
       ],
       "population": {
         "value": 832322,
@@ -3094,7 +3094,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese"
+        "Portugiesisch"
       ],
       "population": {
         "value": 543767,
@@ -3169,7 +3169,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 4999441,
@@ -3246,7 +3246,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 11338138,
@@ -3318,8 +3318,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Greek",
-        "Turkish"
+        "Griechisch",
+        "Türkisch"
       ],
       "population": {
         "value": 1189265,
@@ -3396,8 +3396,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Czech",
-        "Slovak"
+        "Tschechisch",
+        "Slowakisch"
       ],
       "population": {
         "value": 10629928,
@@ -3479,7 +3479,7 @@
     },
     "society": {
       "officialLanguages": [
-        "German"
+        "Deutsch"
       ],
       "population": {
         "value": 82905782,
@@ -3555,8 +3555,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "French"
+        "Arabisch",
+        "Französisch"
       ],
       "population": {
         "value": 958920,
@@ -3628,7 +3628,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 71625,
@@ -3702,7 +3702,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Danish"
+        "Dänisch"
       ],
       "population": {
         "value": 5793636,
@@ -3776,7 +3776,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 10627165,
@@ -3855,7 +3855,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 42228429,
@@ -3931,7 +3931,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 17084357,
@@ -4008,7 +4008,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 98423595,
@@ -4085,8 +4085,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "English",
+        "Arabisch",
+        "Englisch",
         "Tigrinya"
       ],
       "population": {
@@ -4164,7 +4164,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 46796540,
@@ -4239,7 +4239,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Estonian"
+        "Estnisch"
       ],
       "population": {
         "value": 1321977,
@@ -4318,7 +4318,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Amharic"
+        "Amharisch"
       ],
       "population": {
         "value": 109224559,
@@ -4394,8 +4394,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Finnish",
-        "Swedish"
+        "Finnisch",
+        "Schwedisch"
       ],
       "population": {
         "value": 5515525,
@@ -4467,9 +4467,9 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Fijian",
-        "Fiji Hindi"
+        "Englisch",
+        "Fidschianisch",
+        "Fidschi-Hindi"
       ],
       "population": {
         "value": 883483,
@@ -4550,7 +4550,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 66977107,
@@ -4616,7 +4616,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 112640,
@@ -4688,7 +4688,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 2119275,
@@ -4762,7 +4762,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 66460344,
@@ -4839,7 +4839,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Georgian"
+        "Georgisch"
       ],
       "population": {
         "value": 3726549,
@@ -4915,7 +4915,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 29767108,
@@ -4994,7 +4994,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 12414318,
@@ -5068,7 +5068,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 2280102,
@@ -5143,8 +5143,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese",
-        "Upper Guinea Creole"
+        "Portugiesisch",
+        "Oberguinea-Kreolisch"
       ],
       "population": {
         "value": 1874309,
@@ -5219,9 +5219,9 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
-        "Portuguese",
-        "Spanish"
+        "Französisch",
+        "Portugiesisch",
+        "Spanisch"
       ],
       "population": {
         "value": 1308974,
@@ -5298,7 +5298,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Greek"
+        "Griechisch"
       ],
       "population": {
         "value": 10731726,
@@ -5370,7 +5370,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 111454,
@@ -5447,7 +5447,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 17247807,
@@ -5523,7 +5523,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 779004,
@@ -5599,7 +5599,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 9587522,
@@ -5677,7 +5677,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Croatian"
+        "Kroatisch"
       ],
       "population": {
         "value": 4087843,
@@ -5751,8 +5751,8 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
-        "Haitian Creole"
+        "Französisch",
+        "Haitianisch"
       ],
       "population": {
         "value": 11123176,
@@ -5832,7 +5832,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Hungarian"
+        "Ungarisch"
       ],
       "population": {
         "value": 9775564,
@@ -5908,7 +5908,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Indonesian"
+        "Indonesisch"
       ],
       "population": {
         "value": 267663435,
@@ -5987,7 +5987,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Hindi",
         "Tamil"
       ],
@@ -6063,8 +6063,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Irish"
+        "Englisch",
+        "Irisch"
       ],
       "population": {
         "value": 4867309,
@@ -6144,7 +6144,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Persian (Farsi)"
+        "Persisch (Farsi)"
       ],
       "population": {
         "value": 81800269,
@@ -6224,8 +6224,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "Aramaic",
+        "Arabisch",
+        "Aramäisch",
         "Sorani"
       ],
       "population": {
@@ -6298,7 +6298,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Icelandic"
+        "Isländisch"
       ],
       "population": {
         "value": 352721,
@@ -6378,8 +6378,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "Hebrew"
+        "Arabisch",
+        "Hebräisch"
       ],
       "population": {
         "value": 8882800,
@@ -6464,7 +6464,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Italian"
+        "Italienisch"
       ],
       "population": {
         "value": 60421760,
@@ -6536,8 +6536,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Jamaican Patois"
+        "Englisch",
+        "Jamaikanisch-Kreolisch"
       ],
       "population": {
         "value": 2934855,
@@ -6615,7 +6615,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 9956011,
@@ -6688,7 +6688,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Japanese"
+        "Japanisch"
       ],
       "population": {
         "value": 126529100,
@@ -6767,8 +6767,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Kazakh",
-        "Russian"
+        "Kasachisch",
+        "Russisch"
       ],
       "population": {
         "value": 18272430,
@@ -6847,7 +6847,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Swahili"
       ],
       "population": {
@@ -6925,8 +6925,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Kyrgyz",
-        "Russian"
+        "Kirgisisch",
+        "Russisch"
       ],
       "population": {
         "value": 6322800,
@@ -7084,8 +7084,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Gilbertese"
+        "Englisch",
+        "Gilbertesisch"
       ],
       "population": {
         "value": 115847,
@@ -7157,7 +7157,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 52441,
@@ -7231,7 +7231,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Korean"
+        "Koreanisch"
       ],
       "population": {
         "value": 51606633,
@@ -7307,7 +7307,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 4137309,
@@ -7385,7 +7385,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Lao"
+        "Laotisch"
       ],
       "population": {
         "value": 7061507,
@@ -7460,8 +7460,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "French"
+        "Arabisch",
+        "Französisch"
       ],
       "population": {
         "value": 6848925,
@@ -7537,7 +7537,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 4818977,
@@ -7616,7 +7616,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 6678567,
@@ -7688,7 +7688,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 181889,
@@ -7763,7 +7763,7 @@
     },
     "society": {
       "officialLanguages": [
-        "German"
+        "Deutsch"
       ],
       "population": {
         "value": 37910,
@@ -7837,7 +7837,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Sinhala",
+        "Singhalesisch",
         "Tamil"
       ],
       "population": {
@@ -7919,7 +7919,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Sotho"
       ],
       "population": {
@@ -7997,7 +7997,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Lithuanian"
+        "Litauisch"
       ],
       "population": {
         "value": 2801543,
@@ -8073,9 +8073,9 @@
     },
     "society": {
       "officialLanguages": [
-        "German",
-        "French",
-        "Luxembourgish"
+        "Deutsch",
+        "Französisch",
+        "Luxemburgisch"
       ],
       "population": {
         "value": 607950,
@@ -8152,7 +8152,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Latvian"
+        "Lettisch"
       ],
       "population": {
         "value": 1927174,
@@ -8227,8 +8227,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "Berber"
+        "Arabisch",
+        "Berberisch"
       ],
       "population": {
         "value": 36029138,
@@ -8303,7 +8303,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 38682,
@@ -8378,7 +8378,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Moldavian"
+        "Moldauisch"
       ],
       "population": {
         "value": 2706049,
@@ -8450,7 +8450,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French",
+        "Französisch",
         "Malagasy"
       ],
       "population": {
@@ -8523,7 +8523,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Maldivian"
+        "Maledivisch"
       ],
       "population": {
         "value": 515696,
@@ -8599,7 +8599,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 126190788,
@@ -8671,8 +8671,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Marshallese"
+        "Englisch",
+        "Marshallesisch"
       ],
       "population": {
         "value": 58413,
@@ -8750,7 +8750,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Macedonian"
+        "Mazedonisch"
       ],
       "population": {
         "value": 2084367,
@@ -8830,7 +8830,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 19077690,
@@ -8902,8 +8902,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Maltese"
+        "Englisch",
+        "Maltesisch"
       ],
       "population": {
         "value": 484630,
@@ -8981,7 +8981,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Burmese"
+        "Birmanisch"
       ],
       "population": {
         "value": 53708395,
@@ -9059,7 +9059,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Montenegrin"
+        "Montenegrinisch"
       ],
       "population": {
         "value": 631219,
@@ -9130,7 +9130,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Mongolian"
+        "Mongolisch"
       ],
       "population": {
         "value": 3170208,
@@ -9209,7 +9209,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese"
+        "Portugiesisch"
       ],
       "population": {
         "value": 29495962,
@@ -9285,7 +9285,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 4403319,
@@ -9357,9 +9357,9 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "French",
-        "Mauritian Creole"
+        "Englisch",
+        "Französisch",
+        "Mauritius-Kreolisch"
       ],
       "population": {
         "value": 1265303,
@@ -9435,8 +9435,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Chewa"
+        "Englisch",
+        "Chichewa"
       ],
       "population": {
         "value": 18143315,
@@ -9512,8 +9512,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Malay"
+        "Englisch",
+        "Malaiisch"
       ],
       "population": {
         "value": 31528585,
@@ -9596,9 +9596,9 @@
     "society": {
       "officialLanguages": [
         "Afrikaans",
-        "German",
-        "English",
-        "Herero",
+        "Deutsch",
+        "Englisch",
+        "Otjiherero",
         "Khoekhoe",
         "Kwangali",
         "Lozi",
@@ -9683,7 +9683,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 22442948,
@@ -9760,7 +9760,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 195874740,
@@ -9835,7 +9835,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 6465513,
@@ -9915,7 +9915,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Dutch"
+        "Niederländisch"
       ],
       "population": {
         "value": 17231624,
@@ -9991,9 +9991,9 @@
     },
     "society": {
       "officialLanguages": [
-        "Norwegian Nynorsk",
-        "Norwegian Bokmål",
-        "Sami"
+        "Norwegisch (Nynorsk)",
+        "Norwegisch (Bokmål)",
+        "Samisch"
       ],
       "population": {
         "value": 5311916,
@@ -10068,7 +10068,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Nepali"
+        "Nepalesisch"
       ],
       "population": {
         "value": 28087871,
@@ -10140,8 +10140,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Nauru"
+        "Englisch",
+        "Nauruisch"
       ],
       "population": {
         "value": 12704,
@@ -10213,9 +10213,9 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Māori",
-        "New Zealand Sign Language"
+        "Englisch",
+        "Maori",
+        "Neuseeländische Gebärdensprache"
       ],
       "population": {
         "value": 4841000,
@@ -10291,7 +10291,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 4829483,
@@ -10368,7 +10368,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Urdu"
       ],
       "population": {
@@ -10449,7 +10449,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 4176873,
@@ -10529,7 +10529,7 @@
       "officialLanguages": [
         "Aymara",
         "Quechua",
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 31989256,
@@ -10601,7 +10601,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Filipino"
       ],
       "population": {
@@ -10674,8 +10674,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Palauan"
+        "Englisch",
+        "Palauisch"
       ],
       "population": {
         "value": 17907,
@@ -10749,7 +10749,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Hiri Motu",
         "Tok Pisin"
       ],
@@ -10831,7 +10831,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Polish"
+        "Polnisch"
       ],
       "population": {
         "value": 37974750,
@@ -10907,7 +10907,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Korean"
+        "Koreanisch"
       ],
       "population": {
         "value": 25549819,
@@ -10981,7 +10981,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese"
+        "Portugiesisch"
       ],
       "population": {
         "value": 10283822,
@@ -11058,7 +11058,7 @@
     "society": {
       "officialLanguages": [
         "Guaraní",
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 6956071,
@@ -11145,7 +11145,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 4569087,
@@ -11220,7 +11220,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 2781677,
@@ -11299,7 +11299,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Romanian"
+        "Rumänisch"
       ],
       "population": {
         "value": 19466145,
@@ -11386,7 +11386,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Russian"
+        "Russisch"
       ],
       "population": {
         "value": 144478050,
@@ -11465,8 +11465,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "French",
+        "Englisch",
+        "Französisch",
         "Kinyarwanda"
       ],
       "population": {
@@ -11547,7 +11547,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 33699947,
@@ -11628,8 +11628,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "English"
+        "Arabisch",
+        "Englisch"
       ],
       "population": {
         "value": 41801533,
@@ -11707,7 +11707,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 15854360,
@@ -11779,10 +11779,10 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Malay",
+        "Englisch",
+        "Malaiisch",
         "Tamil",
-        "Chinese"
+        "Chinesisch"
       ],
       "population": {
         "value": 5638676,
@@ -11856,7 +11856,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 652858,
@@ -11931,7 +11931,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 7650154,
@@ -12006,7 +12006,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 6420744,
@@ -12080,7 +12080,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Italian"
+        "Italienisch"
       ],
       "population": {
         "value": 33785,
@@ -12156,7 +12156,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
+        "Arabisch",
         "Somali"
       ],
       "population": {
@@ -12238,7 +12238,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Serbian"
+        "Serbisch"
       ],
       "population": {
         "value": 6963764,
@@ -12318,7 +12318,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 10975920,
@@ -12386,7 +12386,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese"
+        "Portugiesisch"
       ],
       "population": {
         "value": 211028,
@@ -12461,7 +12461,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Dutch"
+        "Niederländisch"
       ],
       "population": {
         "value": 575991,
@@ -12539,7 +12539,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Slovak"
+        "Slowakisch"
       ],
       "population": {
         "value": 5446771,
@@ -12616,7 +12616,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Slovene"
+        "Slowenisch"
       ],
       "population": {
         "value": 2073894,
@@ -12691,7 +12691,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Swedish"
+        "Schwedisch"
       ],
       "population": {
         "value": 10175214,
@@ -12771,7 +12771,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Swazi"
       ],
       "population": {
@@ -12844,9 +12844,9 @@
     },
     "society": {
       "officialLanguages": [
-        "Seychellois Creole",
-        "English",
-        "French"
+        "Seychellen-Kreolisch",
+        "Englisch",
+        "Französisch"
       ],
       "population": {
         "value": 96762,
@@ -12924,7 +12924,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 16906283,
@@ -13004,8 +13004,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic",
-        "French"
+        "Arabisch",
+        "Französisch"
       ],
       "population": {
         "value": 15477751,
@@ -13081,7 +13081,7 @@
     },
     "society": {
       "officialLanguages": [
-        "French"
+        "Französisch"
       ],
       "population": {
         "value": 7889094,
@@ -13236,8 +13236,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Russian",
-        "Tajik"
+        "Russisch",
+        "Tadschikisch"
       ],
       "population": {
         "value": 9100837,
@@ -13314,8 +13314,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Russian",
-        "Turkmen"
+        "Russisch",
+        "Turkmenisch"
       ],
       "population": {
         "value": 5850908,
@@ -13389,7 +13389,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Portuguese",
+        "Portugiesisch",
         "Tetum"
       ],
       "population": {
@@ -13462,8 +13462,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Tongan"
+        "Englisch",
+        "Tongaisch"
       ],
       "population": {
         "value": 103197,
@@ -13535,7 +13535,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 1389858,
@@ -13610,7 +13610,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 11565204,
@@ -13691,7 +13691,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Turkish"
+        "Türkisch"
       ],
       "population": {
         "value": 82319724,
@@ -13768,8 +13768,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Tuvaluan"
+        "Englisch",
+        "Tuvaluisch"
       ],
       "population": {
         "value": 11508,
@@ -13842,7 +13842,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Chinese"
+        "Chinesisch"
       ],
       "population": {
         "value": 23923276,
@@ -13926,7 +13926,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Swahili"
       ],
       "population": {
@@ -14005,7 +14005,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
+        "Englisch",
         "Swahili"
       ],
       "population": {
@@ -14086,7 +14086,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Ukrainian"
+        "Ukrainisch"
       ],
       "population": {
         "value": 44622516,
@@ -14162,7 +14162,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 3449299,
@@ -14237,7 +14237,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 326687501,
@@ -14315,8 +14315,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Russian",
-        "Uzbek"
+        "Russisch",
+        "Usbekisch"
       ],
       "population": {
         "value": 32955400,
@@ -14391,8 +14391,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Italian",
-        "Latin"
+        "Italienisch",
+        "Latein"
       ],
       "population": {
         "value": 764,
@@ -14459,7 +14459,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 110210,
@@ -14535,7 +14535,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Spanish"
+        "Spanisch"
       ],
       "population": {
         "value": 28870195,
@@ -14611,7 +14611,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Vietnamese"
+        "Vietnamesisch"
       ],
       "population": {
         "value": 95540395,
@@ -14684,8 +14684,8 @@
     "society": {
       "officialLanguages": [
         "Bislama",
-        "English",
-        "French"
+        "Englisch",
+        "Französisch"
       ],
       "population": {
         "value": 292680,
@@ -14757,8 +14757,8 @@
     },
     "society": {
       "officialLanguages": [
-        "English",
-        "Samoan"
+        "Englisch",
+        "Samoanisch"
       ],
       "population": {
         "value": 196130,
@@ -14835,8 +14835,8 @@
     },
     "society": {
       "officialLanguages": [
-        "Albanian",
-        "Serbian"
+        "Albanisch",
+        "Serbisch"
       ],
       "population": {
         "value": 1802020,
@@ -14912,7 +14912,7 @@
     },
     "society": {
       "officialLanguages": [
-        "Arabic"
+        "Arabisch"
       ],
       "population": {
         "value": 28498687,
@@ -15002,10 +15002,10 @@
     "society": {
       "officialLanguages": [
         "Afrikaans",
-        "English",
-        "Southern Ndebele",
-        "Northern Sotho",
-        "Southern Sotho",
+        "Englisch",
+        "Süd-Ndebele",
+        "Nord-Sotho",
+        "Süd-Sotho",
         "Swazi",
         "Tswana",
         "Tsonga",
@@ -15092,7 +15092,7 @@
     },
     "society": {
       "officialLanguages": [
-        "English"
+        "Englisch"
       ],
       "population": {
         "value": 17351822,
@@ -15210,12 +15210,12 @@
     "society": {
       "officialLanguages": [
         "Chibarwe",
-        "English",
+        "Englisch",
         "Kalanga",
         "Khoisan",
         "Ndau",
-        "Northern Ndebele",
-        "Chewa",
+        "Nord-Ndebele",
+        "Chichewa",
         "Shona",
         "Sotho",
         "Tonga",
@@ -15223,7 +15223,7 @@
         "Tsonga",
         "Venda",
         "Xhosa",
-        "Zimbabwean Sign Language"
+        "Simbabwische Gebärdensprache"
       ],
       "population": {
         "value": 14439018,

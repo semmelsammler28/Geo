@@ -23,6 +23,10 @@ const root = resolve(__dirname, "..");
 const cj = (file) =>
   JSON.parse(readFileSync(resolve(root, "node_modules/country-json/src", file), "utf8"));
 
+// Englische Sprachnamen (aus world-countries) -> Deutsch. Unbekannte bleiben unverändert.
+const LANG_DE = JSON.parse(readFileSync(resolve(root, "scripts/language-de.json"), "utf8"));
+const toGermanLang = (name) => LANG_DE[name] ?? name;
+
 const DATA_SNAPSHOT = 2024; // Struktur/Geo-Stand
 const OFFLINE_STATS_YEAR = 2016; // ungefährer Stand der country-json-Zahlen
 
@@ -196,7 +200,7 @@ function mapCountry(rc) {
       })),
     },
     society: {
-      officialLanguages: Object.values(rc.languages ?? {}),
+      officialLanguages: Object.values(rc.languages ?? {}).map(toGermanLang),
     },
     practical: {
       callingCode: callingCode(rc.idd),
