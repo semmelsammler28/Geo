@@ -5,13 +5,15 @@ import { CompareView } from "./components/CompareView";
 import { RankingsView } from "./components/RankingsView";
 import { QuizView } from "./components/QuizView";
 import { FlashcardsView } from "./components/FlashcardsView";
+import { MapView } from "./components/MapView";
 
-type View = "explore" | "compare" | "rankings" | "quiz" | "flashcards";
+type View = "explore" | "compare" | "rankings" | "map" | "quiz" | "flashcards";
 
 const TABS: { key: View; label: string }[] = [
   { key: "explore", label: "Steckbrief" },
   { key: "compare", label: "Vergleich" },
   { key: "rankings", label: "Rankings" },
+  { key: "map", label: "Karte" },
   { key: "quiz", label: "Quiz" },
   { key: "flashcards", label: "Karteikarten" },
 ];
@@ -59,6 +61,7 @@ export function App() {
         )}
         {view === "compare" && <CompareView ids={compareIds} setIds={setCompareIds} />}
         {view === "rankings" && <RankingsView />}
+        {view === "map" && <MapView onOpenCountry={openCountry} />}
         {view === "quiz" && <QuizView onOpenCountry={openCountry} />}
         {view === "flashcards" && <FlashcardsView />}
       </div>

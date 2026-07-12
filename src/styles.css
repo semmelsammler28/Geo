@@ -381,3 +381,29 @@ body {
 .grade.again { border-color: #b42318; color: #b42318; }
 .grade.good { border-color: var(--accent); color: var(--accent); }
 .grade.easy { border-color: #1a7f37; color: #1a7f37; }
+
+/* --- Karte --- */
+.mapview { padding: 1.5rem 2rem; overflow-y: auto; height: 100%; }
+.map-controls { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.map-controls label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+.map-controls select { border: 1px solid var(--border); border-radius: 8px; background: var(--panel); color: var(--text); padding: 0.4rem 0.6rem; font-size: 0.9rem; }
+.map-legend { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; }
+.legend-bar {
+  display: inline-block; width: 140px; height: 10px; border-radius: 5px;
+  background: linear-gradient(90deg, rgb(219,233,252), rgb(23,55,143));
+}
+.map-wrap { position: relative; max-width: 1100px; margin: 0 auto; }
+.map-svg { width: 100%; height: auto; display: block; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; }
+.map-svg .country { stroke: var(--panel); stroke-width: 0.5; transition: fill 0.15s; }
+.map-svg .country.clickable { cursor: pointer; }
+.map-svg .country.clickable:hover { stroke: var(--text); stroke-width: 1; }
+.map-tooltip {
+  position: absolute; pointer-events: none; z-index: 5;
+  background: var(--text); color: var(--bg);
+  padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.85rem; white-space: nowrap;
+}
+.map-tooltip .muted { color: var(--bg); opacity: 0.8; }
+
+@media (prefers-color-scheme: dark) {
+  .map-svg .country { stroke: #0d0f13; }
+}
