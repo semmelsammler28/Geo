@@ -55,6 +55,31 @@ zur Bestätigung/Änderung durch Laura:
   (Bevölkerung, Regierungschef, BIP), bekommt ein `asOf`-Jahr im Datensatz.
   Kein Anspruch auf Live-Aktualität, aber Transparenz über den Stand.
 
+### 2.1 Getroffene Entscheidungen (Stand 12. Juli 2026, mit Laura fixiert)
+
+Diese Beschlüsse sind für den Datenmodell-Bau verbindlich — nicht mehr
+stillschweigend variieren.
+
+- **Ländermenge**: 195 (193 UN-Mitglieder + Vatikan + Palästina) **+ Taiwan
+  = 196 Records**. Taiwan als eigener Record mit Status-Flag. Abhängige
+  Gebiete (Grönland, Puerto Rico, Hongkong) NICHT als eigene Länder, aber
+  als `dependencies[]` beim Mutterstaat verfügbar.
+  → Felder: `unMembership: 'member' | 'observer' | 'non-member'`,
+    `sovereigntyNote?: string`, `dependencies?: string[]`
+- **Mehrfach-Hauptstädte**: Regierungssitz ist die primäre Quiz-Antwort;
+  Steckbrief zeigt alle. Eindeutigkeit über ein Primär-Flag.
+  → Feld: `capitals: [{ name, type: 'administrative' | 'legislative' |
+    'judicial' | 'constitutional', isPrimaryForQuiz: boolean }]`
+- **Politisch sensible Fälle**: strittige Angaben bekommen ein eigenes
+  Flag (kein Freitext-Vermischen); die Quiz-Engine überspringt als
+  `disputed` markierte Felder bzw. behandelt sie als „Info, nicht abfragbar".
+  → Felder (pro betroffenem Wert): `disputed: boolean`,
+    `disputeNote?: string`
+- **Datenstand/`asOf`**: ein globaler Stand pro Land, einzelne Felder
+  dürfen ihn überschreiben (keine `asOf`-Angabe an jedem Feld).
+  → Felder: `dataSnapshot: number` (Jahr) am Land, optional `asOf?: number`
+    je überschreibendem Feld
+
 ---
 
 ## 3. Datenmodell (Kernstück des Neubaus)
